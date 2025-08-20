@@ -697,4 +697,20 @@ section p,
         font-size: 18px;
     }
 }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ✅ Specific Section Image Fix */
+section .main .main_image img,
+.about .about_main .image img,
+.order .order_main .order_image img {
+    width: 100%;
+    max-width: 500px; /* controls max size */
+    height: auto;
+    margin: 0 auto;
+}
+
 
