@@ -534,9 +534,23 @@ footer .end span{
     border-radius: 15px;
 }
 
-/* ================= RESPONSIVE DESIGN ================= */
+/* ================= BASE FIXES ================= */
+section, .about, .menu, .gallary, .order, footer {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
-/* Tablet screens (<= 1024px) */
+section p,
+.about .about_main .about_text p {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet (<=1024px) */
 @media (max-width: 1024px) {
     section .main {
         flex-direction: column;
@@ -544,18 +558,21 @@ footer .end span{
         top: 80px;
     }
     section .main .main_image img {
-        width: 90%;
+        width: 100%;
+        max-width: 500px;
         left: 0;
     }
-    section p {
-        width: 90%;
+    section .main .men_text h1 {
+        font-size: 45px;
+        top: 0;
         left: 0;
-        bottom: 50px;
-        margin: 0 auto;
+    }
+    section .main .men_text h1 span {
+        font-size: 50px;
     }
     section .main_btn {
-        left: 0;
         margin: 20px auto;
+        left: 0;
     }
 
     .about .about_main {
@@ -563,17 +580,21 @@ footer .end span{
         text-align: center;
     }
     .about .about_main .image img {
-        width: 90%;
-        top: 20px;
+        width: 100%;
+        max-width: 500px;
+        top: 0;
+    }
+    .about .about_main .about_text h1 {
+        font-size: 40px;
+        bottom: 0;
     }
     .about .about_main .about_text p {
-        width: 90%;
-        margin: 0 auto;
+        width: 100%;
+        padding: 0 15px;
     }
     .about .about_btn {
-        left: 0;
         margin: 20px auto;
-        display: block;
+        left: 0;
     }
 
     .menu .menu_box {
@@ -586,11 +607,10 @@ footer .end span{
 
     .order .order_main {
         flex-direction: column;
-        text-align: center;
     }
     .order .order_main .order_image img {
-        width: 90%;
-        margin-bottom: 20px;
+        width: 100%;
+        max-width: 400px;
     }
     .order .order_main form {
         grid-template-columns: 1fr;
@@ -601,7 +621,7 @@ footer .end span{
     }
 }
 
-/* Mobile screens (<= 768px) */
+/* Mobile (<=768px) */
 @media (max-width: 768px) {
     section nav {
         flex-direction: column;
@@ -615,15 +635,15 @@ footer .end span{
     section nav ul li {
         margin: 5px 10px;
     }
+    section nav ul li a {
+        font-size: 15px;
+    }
 
     section .main .men_text h1 {
-        font-size: 40px;
+        font-size: 35px;
     }
     section .main .men_text h1 span {
-        font-size: 45px;
-    }
-    section .main .main_image img {
-        width: 100%;
+        font-size: 40px;
     }
 
     .menu .menu_box {
@@ -639,30 +659,31 @@ footer .end span{
     }
 }
 
-/* Small mobile screens (<= 480px) */
+/* Small Phone (<=480px) */
 @media (max-width: 480px) {
     section nav .logo img {
-        width: 70px;
+        width: 60px;
     }
     section nav ul li a {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     section .main .men_text h1 {
-        font-size: 28px;
+        font-size: 25px;
     }
     section .main .men_text h1 span {
-        font-size: 32px;
+        font-size: 28px;
     }
     section p {
-        font-size: 14px;
+        font-size: 13px;
+        line-height: 20px;
     }
 
     .about .about_main .about_text h1 {
-        font-size: 32px;
+        font-size: 28px;
     }
     .about .about_main .about_text h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .order .order_main form .input input {
@@ -673,7 +694,7 @@ footer .end span{
         grid-template-columns: 1fr;
     }
     footer .footer_main .footer_tag h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
